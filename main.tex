@@ -1,0 +1,194 @@
+% Packages --------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} % Added English as primary
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{microtype} % Improves justification
+\usepackage{newpxtext,newpxmath} % Elegant Palatino font
+\usepackage{enumitem} % Better list control
+\usepackage{fancyhdr} % Professional headers
+\usepackage[left=2.00cm, right=2.00cm, top=2.50cm, bottom=2.00cm]{geometry}
+\usepackage[most]{tcolorbox} % Per il riquadro dell'abstract
+\usepackage{blkarray} % Pacchetto robusto per matrici con etichette
+\usepackage{cuted}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{url}
+\usepackage{eurosym}
+\usepackage{wrapfig}
+\captionsetup{
+    labelfont=bf,      
+    font=small,        
+    format=plain,      % Allineamento pulito
+    margin=20pt       
+}
+\setlength{\headheight}{20pt}
+\addtolength{\topmargin}{-8pt}
+
+% Color Definition ------------------------------------------------------
+% Rosso Sapienza (Bordeaux)
+\definecolor{sapienza}{RGB}{130, 36, 51}
+
+% Annex box -------------------------------------------------------------
+\usepackage[framemethod=TikZ]{mdframed}
+
+% Define the style for your small annex box
+\mdfdefinestyle{annexbox}{
+    linecolor=gray,
+    linewidth=0.5pt,
+    roundcorner=2pt,
+    backgroundcolor=gray!10,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    innerleftmargin=10pt,
+    innerrightmargin=10pt,
+    userdefinedwidth=\textwidth, % Adjust width here
+    align=center % Centers the box on the page
+}
+% Coloured Header  ------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textit{\textcolor{sapienza}{Industrial Symbiosis in Porto Marghera}}}
+\fancyhead[R]{\small \textcolor{sapienza}{\thepage}}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{sapienza}\leaders\hrule height \headrulewidth\hfill}}
+
+% Section Styling (Titoli delle sezioni)
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{sapienza}}{\thesection}{1em}{}
+
+\begin{document}
+
+% --- Header / Logo Section ---------------------------------------------
+\noindent
+\begin{minipage}[b]{0.25\textwidth}
+    \includegraphics[width=\textwidth]{sapienza.png}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.70\textwidth}
+    \raggedleft
+    \rmfamily 
+    {\footnotesize \textsc{Sapienza Università di Roma} \\ 
+    \textit{Department of Management Engineering} \\ 
+    Academic Year 2025/2026}
+\end{minipage}
+
+\vspace{1pt}
+\noindent\textcolor{sapienza}{\rule{\textwidth}{0.4pt}} % La linea sotto il logo
+
+\vspace{4mm}
+
+% --- Title Section -----------------------------------------------------
+\begin{center}
+    {\LARGE \textbf{Analysis of the Industrial Symbiosis in Porto Marghera \vspace{4pt}}} \\
+    \vspace{4mm}
+    {\large Bauzon C. A. $^{1}$, Ba D.$^{2}$, De Nardi A.$^{3}$, Socheleau H.$^{4}$}\\
+    \vspace{3mm}
+    \small $^1$\textit{1985325} \quad $^2$\textit{2244299} \quad $^3$\textit{2265252}\quad $^4$\textit{2230818}
+\end{center}
+
+\vspace{3mm}
+
+% --- Abstract  --------------------------------------------------------
+\begin{tcolorbox}[
+    colback=sapienza!5,     % Sfondo bordeaux chiarissimo
+    colframe=sapienza!20,   % Bordo bordeaux tenue
+    arc=0mm,
+    boxrule=0.5pt,
+    left=15pt, right=15pt, top=10pt, bottom=10pt
+]
+    \small
+    \textbf{\textcolor{sapienza}{Abstract ---}} This work analyzes part of the existing industrial symbiosis (IS) in Porto Marghera (VE). The analysis is carried out using the enterprise input-output approach modeling and assessing the economic and environmental benefit of the companies considered. Furthermore, the potential barriers of the system are examined and some solutions are provided. Finally, the work includes some possible policies that could be implemented to enhance the whole system. All data used in this work refer to the year 2019. 
+    
+\end{tcolorbox}
+
+\vspace{3mm}
+
+% ---- Beginning of body of text --------------------------------------- 
+\begin{multicols}{2}
+		\section{Introduction}
+			\input{01_intro}
+
+\begin{figure*}[t] 
+    \centering
+    \includegraphics[width=\textwidth]{SchemaPM2.png}
+    \caption{Visual representation of the whole industrial symbiosis in Porto Marghera. The image is taken by the 2019 report by Veritas and Comune di Venezia. (Veritas, 2019)}
+    \label{fig:immagine_larga}
+\end{figure*}	
+		\section{IS Type}
+           \input{02_IStype}
+		\section{Enterprise Input-Output approach modeling}
+            \input{03_modeling}
+\end{multicols}
+        \section{IS benefits}
+            \input{04_benefits}
+        \section{Barriers}
+            \input{05_barriers}
+\newpage
+        \section{Policies}
+            \input{06_policies}
+
+\newpage	
+\begin{tcolorbox}[
+    colback=sapienza!5,     % Sfondo bordeaux chiarissimo
+    colframe=sapienza!20,   % Bordo bordeaux tenue
+    arc=0mm,
+    boxrule=0.5pt,
+    left=15pt, right=15pt, top=10pt, bottom=10pt
+]
+    \textbf{\textcolor{sapienza}{AI use statement ---}} Artificial intelligence was used in this work as a helping hand in finding the necessary sources mainly. For example, it was used in finding documents about this case in the first place and it was used in the benefit evaluation to understand what sources could be used. No piece of text was written by AI, nor calculation was carried out by AI. Any existing mistake is completely ascribable to human minds.
+    
+\end{tcolorbox}
+
+\section{References}
+\begin{enumerate}
+    \item CoReVe (2020). \textit{Fascicolo di Bilancio: esercizio chiuso al 31.12.2019}. Available at: \url{https://coreve.it/wp-content/uploads/2024/10/Fascicolo-di-Bilancio-esercizio-chiuso-al-31.12.2019.pdf}
+    \item CoReVe (2020) \textit{Raccolta e Riciclo del vetro: Risultati 2019, Sintesi Programma Specifico di Prevenzione 2020. Milan: Consorzio Recupero Vetro}. Available at:\url{https://coreve.it/wp-content/uploads/2024/10/PSP_2019_2020.pdf}
+    \item European Commission (2022). \textit{Development of guidance on the interpretation of key provisions of Directive 2008/98/EC on waste: Annexes.} Available at: \url{https://ec.europa.eu/environment/pdf/waste/studies/euwastemanagement_annexes.pdf}
+    \item Eurostat (2025). \textit{Recycling – secondary material price indicator. Statistics Explained.} Available at: \url{https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Recycling_%E2%80%93_secondary_material_price_indicator}
+    \item FIGISC (2019) \textit{Prezzi medi mensili extrarete dicembre 2019}. Available at: \url{https://www.figisc.it/blog/2019/12/31/prezzi-medi-mensili-extrarete-dicembre-2019/}
+    \item Gruppo Veritas (n.d.) \textit{Territorio}. Available at: \url{https://www.gruppoveritas.it/chi-siamo/territorio}
+    \item Gruppo Veritas (2020) \textit{Eco-Ricicli Veritas: sintesi dei risultati 2019}. Available at: \url{https://www.gruppoveritas.it/sites/default/files/documenti/tracciabilita-dei-rifiuti/2019/eco-ricicli_veritas_-_sintesi_dei_risultati_2020.pdf}
+    \item Gruppo Veritas (2021). \textit{Agenda del Riciclo}. Available at: \url{https://www.gruppoveritas.it/sites/default/files/allegati/agenda_riciclo_2021_interviste_old.pdf}
+    \item Lavori Pubblici (2015). \textit{Raccolta rifiuti in Veneto: Veritas e Allison, sinergia automatica.} Available at: \url{https://www.lavoripubblici.net/raccolta-rifiuti-in-veneto-veritas-e-allison-sinergia-automatica/}
+    \item Metalrecycling Venice (2020). \textit{Bilancio d'Esercizio al 31.12.2020}. Available at: \url{https://www.metalrecyclingve.com/wp-content/uploads/2021/06/PDFsam_merge.pdf}
+    \item Rilegno (2024). \textit{I numeri del riciclo e del recupero del legno.} Available at: \url{https://www.rilegno.org/i-numeri/}
+    \item Rilegno (2020). \textit{Bilancio d'Esercizio 2019}. Available at: \url{https://www.rilegno.org/wp-content/uploads/2020/07/BILANCIO-2019.pdf}
+    \item Rilegno (2019). \textit{Rapporto 2019. Progetti, Innovazione, Prospettive}. Available at: \url{https://www.rilegno.org/wp-content/uploads/2019/05/Rilegno.Rapporto.2019.sito_.pdf}
+    \item Veritas (2020). \textit{Progetto di riconversione dell’area ex-Inceneritore di Porto Marghera in Ecodistretto: Relazione illustrativa}. Available at: \url{https://www.gruppoveritas.it/sites/default/files/pubblicazioni/20200908_ecodistretto_portomarghera_relazione.pdf}
+\end{enumerate}
+\vspace{2cm}
+
+\noindent
+\begin{minipage}[t]{0.22\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    {\color{sapienza} \textbf{Anna De Nardi}} \\
+\end{minipage}\hfill
+\begin{minipage}[t]{0.22\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    {\color{sapienza} \textbf{Claudia Bauzon}} \\
+\end{minipage}\hfill
+\begin{minipage}[t]{0.22\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    {\color{sapienza} \textbf{Hugo Socheleau}} \\
+\end{minipage}\hfill
+\begin{minipage}[t]{0.22\textwidth}
+    \centering
+    \rule{\textwidth}{0.4pt}\\
+    {\color{sapienza} \textbf{Djibi Ba}} \\
+\end{minipage}
+
+	
+\end{document}

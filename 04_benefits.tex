@@ -1,0 +1,148 @@
+\subsection{Economic benefit}
+\begin{multicols}{2}
+\noindent The economic benefit (EB) is calculated using formula (9) which estimates how much each company can save by implementing industrial symbiosis.
+\begin{equation}
+    EB = [(dc+pc)-(rc+tc)]
+\end{equation}
+where 
+\begin{itemize}[nosep]
+    \item $dc =$ waste disposal cost
+    \item $pc =$ input purchase cost
+    \item $rc =$ treatment cost
+    \item $tc =$ transportation cost
+\end{itemize}
+\noindent As a matter of fact, the input purchase cost and the waste disposal cost are two expenses present when IS does not exist. These expenses are reduced or completely avoided when IS is implemented because the input is substituted by the waste of another company. However, with industrial symbiosis, the external waste usually needs to be treated and transported, therefore there are two additional costs. Therefore, IS is convenient and gives an economic benefit to the company as long as the $rc$ and $tc$ are lower than the sum of $dc$ and $pc$. In other words, $EB>0$ must be valid. \\
+In the analyzed system, the disposal cost for general mixed waste in Italy is \EUR{55}/ton (European Commission, 2022). This value is considered valid for the three selected companies. \\
+\end{multicols}
+
+\newtcolorbox{companybox}[1]{
+    colback=sapienza!5,
+    colframe=sapienza!20,
+    arc=2mm,
+    boxrule=0.8pt,
+    left=4mm, right=4mm, top=3mm, bottom=3mm,
+    title=\textbf{#1},
+    coltitle=black,
+    fonttitle=\large,
+    attach title to upper=\quad,
+    after skip=1.5em
+}
+
+\begin{companybox}{Veritas}
+Veritas is a waste collection company, therefore, it does not have an input purchase cost. In contrast, it does have a transportation and treatment cost, which is extracted from their annual financial statement. In 2019, Metalrecycling Venice (the only part of Veritas that treats metal) spent \EUR{370.344} on transportation, \EUR{29527} on electricity and \EUR{5.635} on water (Metalrecycling Venice, 2020). Metal is usually treated in an electric arc furnace and is cooled with water. Thus, the treatment cost is considered as the sum of the cost of water and electricity. These amounts are divided by the total annual output to get the cost in \euro / ton.
+
+\vspace{2mm}
+\centering
+\begin{tabular}{c|c|c|c|c}
+    $dc$ & $pc$ & $rc$ & $tc$ & \textbf{Total} \\ \hline
+    \EUR{55}/t & 0 & \EUR{0.6}/t & \EUR{6,5}/t & \textbf{\EUR{47,9}/t}
+\end{tabular}
+\end{companybox}
+\vspace{2mm}
+
+\begin{companybox}{Rilegno}
+Rilegno is a national consortium that was created to recycle wood products. For this reason, it does not have an input purchase cost, as stated for Veritas. In contrast, it has a transportation and treatment cost, which is declared in the annual financial statement. In 2019, Rilegno spent \EUR{730.759} + \EUR{450.433} on treatment and \EUR{11.736.842} + \EUR{15.656.500} on transportation (Rilegno, 2020).
+
+\vspace{2mm}
+\centering
+\begin{tabular}{c|c|c|c|c}
+    $dc$ & $pc$ & $rc$ & $tc$ & \textbf{Total} \\ \hline
+    \EUR{55}/t & 0 & \EUR{1,25}/t & \EUR{29}/t & \textbf{\EUR{24,75}/t}
+\end{tabular}
+\end{companybox}
+
+\vspace{2mm}
+
+\begin{companybox}{Ecopatè}
+ Ecopatè is the only plant among the selected three that would have an input purchase cost. In 2019, recycled glass cost \EUR{71}/t (Eurostat, 2022). Concerning the treatment cost, the Italian national consortium for glass recycling CoReVe states that in 2019 \EUR{82.783.086}  was spent to produce 2.069.407 tons of recycled glass (CoReVe, 2020, Bilancio d'esercizio)(CoReVe, 2020, Risultati). Therefore, in 2019 the treatment cost of glass was \EUR{40}/t. This amount is considered as the mean cost of glass treatment, also valid for Ecopatè. Finally, the transportation cost was calculated considering the type of truck used to take glass from Veritas to Ecopaté (see Note 1).
+ 
+\vspace{2mm}
+\centering
+\begin{tabular}{c|c|c|c|c}
+    $dc$ & $pc$ & $rc$ & $tc$ & \textbf{Total} \\ \hline
+    \EUR{55}/t & \EUR{71}/t & \EUR{40}/t & \EUR{3,5}/t & \textbf{\EUR{82,5}/t}
+\end{tabular}
+\end{companybox}
+
+\noindent In conclusion, all economic benefits are positive, as it should be for the industrial symbiosis to be convenient for each company. 
+\vspace{2mm}
+\begin{mdframed}[style=annexbox]
+    \small \textbf{Note 1:} The truck used by Veritas to deliver waste is Iveco EuroCargo that uses 18,5 liters of gasoline per 100 km (Lavori Pubblici, 2015). The distance between Ecopatè plant and Veritas plant is a bit less than 100 km (sum of back and forth), and the price of gasoline in 2019 in northern Italy was 1,4 €/l (FIGISC, 2019). EuroCargo weight when completely full 12 t and when empty 4,5 t, that means it can carry approximately 7,5 tons. That leads to 3,5 €/t over 100 km
+\end{mdframed}
+% -----------------------------------------------------
+\subsection{Environmental benefit}
+The environmental benefit is defined here as the difference in the percentage of waste sent to landfills with and without industrial symbiosis. To evaluate the percentage of waste to landfill with IS, the calculation considers the actual waste over the output of the selected company: 
+\begin{equation}
+   \underset{\text{with IS}}{\text{env. b.}} = \frac{\text{waste to landfill with IS}}{\text{output}}
+\end{equation}
+Instead, to assess the environmental benefit without IS, the waste at the numerator considers how much waste would go to landfill if companies did not cooperate: 
+\begin{equation}
+    \underset{\text{without IS}}{\text{env. b.}} = \frac{\text{waste to landfill without IS}}{\text{output}}
+\end{equation}
+Therefore, the difference between (11) and (10) is the actual environmental benefit:
+\begin{equation}
+    \text{env.b.} = \underset{\text{without IS}}{\text{env.b.}} - \underset{\text{with IS}}{\text{env.b.}} 
+\end{equation}
+For \textbf{Veritas}, the environmental benefit of industrial symbiosis is the ratio between the mixed waste and the output. Without IS, all the incoming waste from the inhabitants of the Comune di Venezia (box D) would go to landfill, so the $ \text{env.b.}$ is the sum of the mixed waste plus the exchange between Veritas and the two other companies divided by the same output. Therefore, the total  $ \text{env.b.}$ results 139\%.
+\begin{center}
+\begin{minipage}{0.48\textwidth}
+\begin{align*}
+\underset{\text{with IS}}{\text{env.b.}} &= \frac{W_{\text{Veritas'mixed waste}}}{x_{\text{Veritas}}} \\
+&\rule[-1.5ex]{0.5pt}{4ex} \\ % This creates the vertical connecting line
+&= \frac{14\,946}{51\,270} = 29\%
+\end{align*}
+\end{minipage}
+\hfill % Adds horizontal space between the two minipages
+\begin{minipage}{0.48\textwidth}
+\begin{align*}
+\underset{\text{without IS}}{\text{env.b.}} &= \frac{W_{\text{Veritas'mixed waste}} + Z_{AB} + Z_{AC}}{x_{\text{Veritas}}} \\
+&\rule[-1.5ex]{0.5pt}{5ex} \\ % Adjusts the vertical connecting line
+&= 168\%
+\end{align*}
+\end{minipage}
+\end{center}
+
+\begin{align*}
+\text{env.b.} &= \underset{\text{without IS}}{\text{env.b.}} - \underset{\text{with IS}}{\text{env.b.}}= 139\%
+\end{align*}
+
+\noindent For \textbf{Ecopaté}, the environmental benefit is 3\%, calculated in a similar way, by comparing the waste with and without IS, based on the ratio of glass waste to total waste.
+
+% Section 1: Ecopatè Calculations
+\begin{center}
+\begin{minipage}{0.48\textwidth}
+\begin{align*}
+\underset{\text{with IS}}{\text{env. b.}} &= \frac{W_{\text{Ecopatè glass waste}}}{x_{\text{Ecopatè}}} \\
+&\rule[-1ex]{0.5pt}{3ex} \\ 
+&= 8\%
+\end{align*}
+\end{minipage}
+\hfill % Adds horizontal space between the two minipages
+\begin{minipage}{0.48\textwidth}
+\begin{align*}
+\underset{\text{without IS}}{\text{env. b.}} &= \frac{W_{\text{Eco. glass waste}} + W_{\text{Eco. metal waste}}}{x_{\text{Ecopatè}}} \\
+&\rule[-1ex]{0.5pt}{3ex} \\ 
+&= 11\%
+\end{align*}
+\end{minipage}
+\end{center}
+
+% Section 2: Final Difference
+\begin{align*}
+\text{env.b.} &= \underset{\text{without IS}}{\text{env.b.}} - \underset{\text{with IS}}{\text{env.b.}} = 3\%
+\end{align*}
+
+\noindent \textbf{Rilegno's} benefit is unique, as its primary function is wood waste recycling. Therefore, its benefit is assessed based on its role in recycling wood, not directly through industrial symbiosis. Therefore, calculating the environmental benefit of Rilegno in the same way as before is not practical because. In this case, the environmental benefit does not stem from industrial symbiosis, but from the company it self.\\
+
+\noindent \textbf{In general}, the overall environmental benefit is determined by the combined mixed waste from Veritas, glass waste from Ecopaté, and wood waste from Rilegno, compared to the total waste from these companies, resulting in an average benefit of 5\%.
+\begin{equation*}
+    \underset{\text{with IS}}{\text{env. b.}} = \frac{W_{\text{mixed waste of Veritas}} + W_{\text{glass waste of Ecopatè}} + W_{\text{wood waste of Rilegno}}}{x_{\text{C.Veritas}} + x_{\text{C.Rilegno}}} = 3\%
+\end{equation*}
+
+\begin{equation*}
+    \underset{\text{without IS}}{\text{env. b.}} = \frac{W_{\text{mixed from C.Veritas}} + W_{\text{glass from C.Veritas}} + W_{\text{wood from C.Veritas+C.Rilegno}} + W_{\text{metal from C.Veritas}}}{x_{\text{C.Veritas}} + x_{\text{C.Rilegno}}} = 8\%
+\end{equation*}
+
+\begin{equation*}
+    \text{env.b.} = \underset{\text{without IS}}{\text{env.b.}} - \underset{\text{with IS}}{\text{env.b.}} = 5\%
+\end{equation*}
